@@ -6,15 +6,12 @@ package magi;
 
 public class spells {
     
-    private int offence, defence;
-    private String name;
-    private spell_subclass aSpell_subclass;
-
-    public spells(String name, int offence, spell_subclass aSpell_subclass){
-        
-    }
-    public spells(String name, int defence, spell_subclass aSpell_subclass, int pass){
+    private String name, trait;
     
+
+    public spells(String name, String trait){
+        this.name = name;
+        this.trait = trait;
     }
     public spells(){
     
