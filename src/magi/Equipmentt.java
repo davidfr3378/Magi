@@ -5,7 +5,7 @@ package magi;
  */
 
 public class Equipmentt {
-    private static String name, type, description;
+    private String name, type, description;
 
     
     
@@ -17,19 +17,19 @@ public class Equipmentt {
     }
     
     
-    public static String getName(){
+    public String getName(){
         return name;
     }
     
-    public static String getType(){
+    public String getType(){
         return type;
     }
     
-    public static String getDescription(){
+    public String getDescription(){
         return description;
     }
     
-    public static String getEquipment() {
+    public String getEquipment() {
         return "Equipment: " + name + ", Type: " + type + ", Description: \n\t" + description;
     }
     

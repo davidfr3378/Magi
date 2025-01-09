@@ -6,8 +6,8 @@ package magi;
 
 public class Spell {
     
-    private static String name, trait, description;
-    private static int    level, mana_cost;
+    private String name, trait, description;
+    private int    level, mana_cost;
 
     public Spell(String name, int level, int mana_cost, String trait, String description){
         this.name = name;
@@ -18,27 +18,27 @@ public class Spell {
     }
     
     
-    public static String getName(){
+    public String getName(){
         return name;
     }
     
-    public static String getTrait(){
+    public String getTrait(){
         return trait;
     }
     
-    public static int getLevel(){
+    public int getLevel(){
         return level;
     }
     
-    public static int getMana_cost(){
+    public int getMana_cost(){
         return mana_cost;
     }
     
-    public static String getDescription(){
+    public String getDescription(){
         return description;
     }
     
-    public static String getSpells(){
+    public String getSpells(){
         return "Spell: " + name + ", Level: " + level + ", Mana cost: " + mana_cost + ", Trait: " + trait + ", Description: " + description;
     }
 }

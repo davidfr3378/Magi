@@ -23,7 +23,9 @@ public class Mage {
     
     public void displaySpells(){
         for(Spell spell : spells){
-            System.out.println("Spell: " + spell.getName() + ", Level: " + spell.getLevel()+ ", Mana cost: " + spell.getMana_cost()+ ", Trait: " + spell.getTrait()+ ", Description: " + spell.getDescription());
+            System.out.println("Spell: " + spell.getName() + ", Level: " + spell.getLevel()
+                    + ", Mana cost: " + spell.getMana_cost()+ ", Trait: " + spell.getTrait()
+                    + ", Description: " + spell.getDescription()+"\n");
         }
     }
     
@@ -33,7 +35,8 @@ public class Mage {
     
     public void displayEquipment(){
         for(Equipmentt equipment : equipments){
-            System.out.println("Equipment: " + Equipmentt.getName() + ", Type: " + Equipmentt.getType() + ", Description: " + Equipmentt.getDescription());
+            System.out.println("Equipment: " + equipment.getName() + ", Type: " 
+                    + equipment.getType() + ", Description: " + equipment.getDescription()+"\n");
         }
     }
 }
