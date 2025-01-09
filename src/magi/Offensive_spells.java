@@ -9,7 +9,7 @@ public class Offensive_spells extends Spell{
     private int damage;
     
     public Offensive_spells(String name, String trait, int damage){
-        super(name,trait);
+        super(name, 7, 5,trait, "Shoots a basic fireball");
         this.damage = damage;
     }
     

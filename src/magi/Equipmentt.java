@@ -5,12 +5,15 @@ package magi;
  */
 
 public class Equipmentt {
-    private static String name, type;
+    private static String name, type, description;
+
+    
     
 
-    public Equipmentt(String name, String type){
+    public Equipmentt(String name, String type, String description){
         this.name = name;
         this.type = type;
+        this.description = description;
     }
     
     
@@ -22,8 +25,12 @@ public class Equipmentt {
         return type;
     }
     
-    @Override
-    public String toString(){
-        return "Spell: " + name + ", Type: " + type;
+    public static String getDescription(){
+        return description;
     }
+    
+    public static String getEquipment() {
+        return "Equipment: " + name + ", Type: " + type + ", Description: \n\t" + description;
+    }
+    
 }

@@ -8,7 +8,7 @@ public class Defensive_spells extends Spell{
     private int defence;
     
     public Defensive_spells(String name, String trait, int defence){
-        super(name,trait);
+        super(name, 7, 5,trait, "Shoots a basic fireball");
         this.defence = defence;
     }
     

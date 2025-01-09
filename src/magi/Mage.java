@@ -23,7 +23,7 @@ public class Mage {
     
     public void displaySpells(){
         for(Spell spell : spells){
-            System.out.println("Spell: " + Spell.getName() + ", Trait: " + Spell.getTrait());
+            System.out.println("Spell: " + spell.getName() + ", Level: " + spell.getLevel()+ ", Mana cost: " + spell.getMana_cost()+ ", Trait: " + spell.getTrait()+ ", Description: " + spell.getDescription());
         }
     }
     
@@ -33,7 +33,7 @@ public class Mage {
     
     public void displayEquipment(){
         for(Equipmentt equipment : equipments){
-            System.out.println("Equipment: " + Equipmentt.getName() + ", Type: " + Equipmentt.getType());
+            System.out.println("Equipment: " + Equipmentt.getName() + ", Type: " + Equipmentt.getType() + ", Description: " + Equipmentt.getDescription());
         }
     }
 }
