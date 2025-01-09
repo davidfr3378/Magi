@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Mage {
     
     private ArrayList<Spell> spells;
-    private ArrayList<Equipment> equipments;
+    private ArrayList<Equipmentt> equipments;
     
     public Mage(){
         spells    = new ArrayList<>();
@@ -27,13 +27,13 @@ public class Mage {
         }
     }
     
-    public void addEquipment(Equipment equipment){
+    public void addEquipment(Equipmentt equipment){
         equipments.add(equipment);
     }
     
     public void displayEquipment(){
-        for(Equipment equipment : equipments){
-            System.out.println("Equipment: " + Equipment.getName() + ", Type: " + Equipment.getType());
+        for(Equipmentt equipment : equipments){
+            System.out.println("Equipment: " + Equipmentt.getName() + ", Type: " + Equipmentt.getType());
         }
     }
 }

@@ -9,7 +9,7 @@ public class Procedure {
     public void game_intro(){
         Mage main_character = new Mage();
         
-        Equipment starter_wand = new Equipment("Beginer Wand", "Thorium");
+        Equipmentt starter_wand = new Equipmentt("Beginer Wand", "Thorium");
         
         main_character.addEquipment(starter_wand);
 
