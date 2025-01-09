@@ -13,7 +13,18 @@ public class spells {
         this.name = name;
         this.trait = trait;
     }
-    public spells(){
     
+    
+    public String getName(){
+        return name;
+    }
+    
+    public String getTrait(){
+        return trait;
+    }
+    
+    @Override
+    public String toString(){
+        return "Spell: " + name + ", Trait: " + trait;
     }
 }
