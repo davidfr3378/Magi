@@ -1,1 +1,17 @@
-//File
+package magi;
+
+/*
+ * @author: david.ez
+ */
+
+public class Potion extends Equipmentt{
+    private int effect;
+
+
+
+    public Potion(String name, String type, String description, int effect){
+        super(name,type, description);
+        this.effect = effect;
+    }
+}
+
