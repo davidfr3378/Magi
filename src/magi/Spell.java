@@ -4,22 +4,22 @@ package magi;
  * @author ezimada844
  */
 
-public class spells {
+public class Spell {
     
-    private String name, trait;
+    private static String name, trait;
     
 
-    public spells(String name, String trait){
+    public Spell(String name, String trait){
         this.name = name;
         this.trait = trait;
     }
     
     
-    public String getName(){
+    public static String getName(){
         return name;
     }
     
-    public String getTrait(){
+    public static String getTrait(){
         return trait;
     }
     

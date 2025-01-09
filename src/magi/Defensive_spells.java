@@ -4,7 +4,7 @@ package magi;
  * @author: david.ez
  */
 
-public class Defensive_spells extends spells{
+public class Defensive_spells extends Spell{
     private int defence;
     
     public Defensive_spells(String name, String trait, int defence){

@@ -4,7 +4,7 @@ package magi;
  * @author: david.ez
  */
 
-public class Offensive_spells extends spells{
+public class Offensive_spells extends Spell{
     
     private int damage;
     
