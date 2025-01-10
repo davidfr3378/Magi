@@ -13,5 +13,9 @@ public class Potion extends Equipmentt{
         super(name,type, description);
         this.effect = effect;
     }
+    
+    public int getEffect(){
+        return effect;
+    }
 }
 
