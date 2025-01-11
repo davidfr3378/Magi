@@ -90,7 +90,9 @@ public class Procedure {
         
         main_character.displaySpells(); //Display spells
         main_character.displayEquipment(); //Display Equipment
+        ligma();
     }
+    //Ligma added
     
     /**
      *
@@ -105,6 +107,10 @@ public class Procedure {
             System.out.print(ch);
             unit.sleep(delay);
         }
+    }
+
+    private void ligma() {
+        System.out.println("Ligma is born");
     }
     
 }
