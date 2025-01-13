@@ -30,6 +30,7 @@ public class UI {
         this.gm = gm;
         createMainField();
         createBackground();
+        createObject();
         
         window.setVisible(true);
     }
@@ -75,7 +76,16 @@ public class UI {
         ImageIcon bgIcon = new ImageIcon(getClass().getClassLoader().getResource("res\\spacebg.png"));
         bgLabel[1].setIcon(bgIcon);
         
+    }
+    public void createObject(){
+        
+        JLabel objectLabel = new JLabel();
+        objectLabel.setBounds(400,150,200,200);
+        
+        ImageIcon objectIcon = new ImageIcon(getClass().getClassLoader().getResource("res\\Culminating-assetsWhite-Screen(a-placeholder-in-the-code).png"));
+        objectLabel.setIcon(objectIcon);
+        
+        bgPanel[1].add(objectLabel);
         bgPanel[1].add(bgLabel[1]);
     }
-    
 }
