@@ -76,16 +76,19 @@ public class UI {
         ImageIcon bgIcon = new ImageIcon(getClass().getClassLoader().getResource("res\\spacebg.png"));
         bgLabel[1].setIcon(bgIcon);
         
+        // bgPanel[1].add(bgLabel[1]); Supposed to be here but was moved due to layers
+        
     }
     public void createObject(){
         
         JLabel objectLabel = new JLabel();
-        objectLabel.setBounds(400,150,200,200);
+        objectLabel.setBounds(0,0,800,600);
         
-        ImageIcon objectIcon = new ImageIcon(getClass().getClassLoader().getResource("res\\Culminating-assetsWhite-Screen(a-placeholder-in-the-code).png"));
+        ImageIcon objectIcon = new ImageIcon(getClass().getClassLoader().getResource("res\\fairly odd resized.png"));
         objectLabel.setIcon(objectIcon);
         
         bgPanel[1].add(objectLabel);
         bgPanel[1].add(bgLabel[1]);
+        
     }
 }
