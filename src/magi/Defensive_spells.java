@@ -21,3 +21,4 @@ public class Defensive_spells extends Spell{
         return "Spell: " + getName() + ", Trait: " + getTrait() + "Defence: " + defence;
     }
 }
+//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
