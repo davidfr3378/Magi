@@ -37,6 +37,7 @@ public class Mage {
         for(Equipmentt equipment : equipments){
             System.out.println("Equipment: " + equipment.getName() + ", Type: " 
                     + equipment.getType() + ", Description: " + equipment.getDescription()+"\n");
+            
         }
     }
 }
