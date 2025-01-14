@@ -82,13 +82,14 @@ public class UI {
     public void createObject(){
         
         JLabel objectLabel = new JLabel();
-        objectLabel.setBounds(0,0,800,600);
+        objectLabel.setBounds(-200,100,800,600);
         
-        ImageIcon objectIcon = new ImageIcon(getClass().getClassLoader().getResource("res\\fairly odd resized.png"));
+        ImageIcon objectIcon = new ImageIcon(getClass().getClassLoader().getResource("res\\Mage_resized-removebg_1.png"));
         objectLabel.setIcon(objectIcon);
         
         bgPanel[1].add(objectLabel);
-        bgPanel[1].add(bgLabel[1]);
+        
+        bgPanel[1].add(bgLabel[1]); //moved here from createBackground()
         
     }
 }
