@@ -2,15 +2,20 @@ package magi;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import javax.swing.ImageIcon;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JPopupMenu;
 import javax.swing.JTextArea;
+import javax.swing.SwingUtilities;
 
 /*
- * @author: david.ez
+ * @authors: david.ez, nelson.ez
  */
 
 public class UI {
@@ -29,8 +34,7 @@ public class UI {
     public UI(GameManager gm){
         this.gm = gm;
         createMainField();
-        createBackground();
-        createObject();
+        generateScreen();
         
         window.setVisible(true);
     }
@@ -62,34 +66,80 @@ public class UI {
         window.add(messageText);
     }
     
-    public void createBackground(){
+    public void createBackground(int bgNum, String bgFilename){
         
-        bgPanel[1] = new JPanel();
-        bgPanel[1].setBounds(50,50,700,350); // x = 50, y = 50, width = 700, height = 350
-        bgPanel[1].setBackground(Color.blue);
-        bgPanel[1].setLayout(null);
-        window.add(bgPanel[1]);
+        bgPanel[bgNum] = new JPanel();
+        bgPanel[bgNum].setBounds(50,50,700,350); // x = 50, y = 50, width = 700, height = 350
+        bgPanel[bgNum].setBackground(Color.blue);
+        bgPanel[bgNum].setLayout(null);
+        window.add(bgPanel[bgNum]);
         
-        bgLabel[1] = new JLabel();
-        bgLabel[1].setBounds(0,0,700,350);
+        bgLabel[bgNum] = new JLabel();
+        bgLabel[bgNum].setBounds(0,0,700,350);
         
-        ImageIcon bgIcon = new ImageIcon(getClass().getClassLoader().getResource("res\\spacebg.png"));
-        bgLabel[1].setIcon(bgIcon);
+        ImageIcon bgIcon = new ImageIcon(getClass().getClassLoader().getResource("res\\"+bgFilename));
+        bgLabel[bgNum].setIcon(bgIcon);
         
         // bgPanel[1].add(bgLabel[1]); Supposed to be here but was moved due to layers
         
     }
-    public void createObject(){
+    
+    public void createObject(int bgNum, int objx, int objy, int objWidth, int objHeight, String objFileName,
+    String choice1Name, String choice2Name, String choice3Name){
+        //Create popup menu
+        JPopupMenu popMenu = new JPopupMenu();
         
+        //Create popup menu items
+        JMenuItem menuItem[] = new JMenuItem[4]; //I don't want to use ) so [1], [2], [3]
+        menuItem[1] = new JMenuItem(choice1Name);
+        popMenu.add(menuItem[1]);
+        
+        menuItem[2] = new JMenuItem(choice2Name);
+        popMenu.add(menuItem[2]);
+        
+        menuItem[3] = new JMenuItem(choice3Name);
+        popMenu.add(menuItem[3]);
+        
+        //create objects 
         JLabel objectLabel = new JLabel();
-        objectLabel.setBounds(-200,100,800,600);
+        //objectLabel.setBounds(-40,-40,800,600); //Mage settings
+        objectLabel.setBounds(objx,objy,objWidth,objHeight);
         
-        ImageIcon objectIcon = new ImageIcon(getClass().getClassLoader().getResource("res\\Mage_resized-removebg_1.png"));
+        
+        ImageIcon objectIcon = new ImageIcon(getClass().getClassLoader().getResource("res\\"+ objFileName));
         objectLabel.setIcon(objectIcon);
         
-        bgPanel[1].add(objectLabel);
+        objectLabel.addMouseListener(new MouseListener() {
+
+            public void mouseClicked(MouseEvent e) {}
+
+            
+            public void mousePressed(MouseEvent e) {
+                if(SwingUtilities.isRightMouseButton(e)){
+                    popMenu.show(objectLabel,e.getX(),e.getY());
+                }
+            }
+
+            public void mouseReleased(MouseEvent e) {}
+
+
+            public void mouseEntered(MouseEvent e) {}
+
+
+            public void mouseExited(MouseEvent e) {}
+        });
         
-        bgPanel[1].add(bgLabel[1]); //moved here from createBackground()
+        bgPanel[bgNum].add(objectLabel);
+        bgPanel[bgNum].add(bgLabel[bgNum]); //moved here from createBackground()
+    }
+    
+    public void generateScreen(){
+        
+        //SCREEN 1
+        createBackground(1,"sunny.png");
+        createObject(1,440,140,200,200,"hut(200x200).png","Inspect","Enter","rest");
+        createObject(1,-40,150,400,225,"Mage(400x225).png","Inspect","Give Up","Attack");//Mage Creation
+         //dungeon
         
     }
 }
