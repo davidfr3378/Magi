@@ -3,6 +3,16 @@ Day 1: 1/8/2025
 Version 1:
 Idea: An extremely basic rpg (almost a text-adventure game tbh) in which the main character is a student mage. His homeland, lysergic acid diethylamide is under attack by a legion of dark elfs. Our main character venture for a little bit through his country as he fends of intruders. He grows stronger by killing enemies (strengthing his soul with the soul origins of others) and learning spells.
 
+To-do:
+1. Select Actions
+2. Change the sizes (Nelson)
+3. Import elf (Nelson)
+4. Note potions
+5. Objects in swing as in ref to class. Mage currently doesn't? (David)
+Story
+
+
+
 Note to Nelson:
 add, commit, push 
 (push is in remote), Nelson!!!!!!!!!!!!!!!!!!!!!!!!!1!!!!!!!!!!!!!!!!!!!!!!!!!!1!!!!!!!!!!!!!!!!!
@@ -13,6 +23,7 @@ Note:  libGDX [Good but sttep learning curve]
 Assets could come from:
 1. Nelson
 2. CraftPix.Net
+
 
 
 Cookie CLicker save:
